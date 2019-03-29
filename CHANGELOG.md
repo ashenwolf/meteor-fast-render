@@ -57,7 +57,7 @@
 
 ### v2.16
 
-- Releasing as `staringatlights:fast-render`
+- Releasing as `graywolf:fast-render`
 
 ### v2.14.0
 

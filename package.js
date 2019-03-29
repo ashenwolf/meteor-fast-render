@@ -1,22 +1,21 @@
 /* global Package Npm */
 Package.describe({
-	summary:
-		'Render your app before the DDP connection even comes alive - magic?',
-	version: '3.0.8',
-	git: 'https://github.com/abecks/meteor-fast-render',
-	name: 'staringatlights:fast-render',
+	summary: 'Render your app before the DDP connection even comes alive - magic?',
+	version: '3.0.9',
+	git: 'https://github.com/ashenwolf/meteor-fast-render',
+	name: 'graywolf:fast-render',
 })
 
 Npm.depends({
 	connect: '2.13.0',
 })
 
-Package.onUse(function(api) {
+Package.onUse(function (api) {
 	api.versionsFrom('METEOR@1.6.1')
 	api.mainModule('lib/client/fast_render.js', 'client')
 	api.mainModule('lib/server/namespace.js', 'server')
 	api.use('staringatlights:inject-data@2.2.1', ['client', 'server'])
-	api.use('chuangbo:cookie@1.1.0', 'client')
+	api.use('ostrio:cookies@2.3.0', 'client')
 	api.use('meteorhacks:picker@1.0.3', 'server')
 	api.use('lamhieu:meteorx@2.0.1', 'server')
 
@@ -65,9 +64,9 @@ Package.onUse(function(api) {
 	// api.export('__init_fast_render', ['client'])
 })
 
-Package.onTest(function(api) {
+Package.onTest(function (api) {
 	api.use(['ecmascript'], ['client', 'server'])
-	api.use('staringatlights:fast-render', ['client', 'server'])
+	api.use('graywolf:fast-render', ['client', 'server'])
 	api.use('tinytest', ['client', 'server'])
 	api.use('http', 'server')
 	api.use('random', ['server', 'client'])
